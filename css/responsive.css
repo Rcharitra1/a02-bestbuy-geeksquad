@@ -1,0 +1,49 @@
+html{
+  font-family: Arial, sans-serif;
+}
+
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h3{
+  text-align: center;
+}
+
+main {
+  padding: 5%;
+}
+
+
+main > section:first-child{
+  display: flex;;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+h3{
+  flex-basis: 100%
+}
+main > section:first-child > section{
+  flex-basis: calc((100% - 16px) / 2);
+}
+
+main > section:nth-child(2) h3{
+  text-align: left;
+}
+
+@media(min-width:768px)
+{
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main > section:first-child > section{
+    flex-basis: calc((100% - (16px * 3)) / 4);
+  }
+  main > section:nth-of-type(3) section:nth-of-type(1){
+  }
+}
